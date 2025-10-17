@@ -1,0 +1,29 @@
+.body { 
+    font-family: sans-serif; 
+    margin: 0; }
+.container { 
+    display: flex; 
+    min-height: 100vh; 
+    align-items: stretch; }
+.columncookie { 
+    background: goldenrod; 
+    display:flex; 
+    flex-direction: column; 
+    justify-content:center; 
+    align-items: center; 
+    flex: 1; }
+.columncake { 
+    background: goldenrod; 
+    display:flex; 
+    flex-direction: column; 
+    justify-content:center; 
+    align-items: center; 
+    flex: 1; }
+.button {
+    background-color: purple;   
+    color: white;                  
+    padding: 10px 20px;            
+    border: none;                  
+    border-radius: 5px;                         
+    font-size: 16px; 
+}

@@ -4,36 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Module 1 Exercise 3</title>
-
-<style>
-body { 
-    font-family: sans-serif; 
-    margin: 0; }
-.container { 
-    display: flex; 
-    min-height: 100vh; 
-    align-items: stretch; }
-.column { 
-    background: goldenrod; 
-    display:flex; 
-    flex-direction: column; 
-    justify-content:center; 
-    align-items: center; 
-    flex: 1; }
-</style>
-
+    <link rel="stylesheet" href="exercise3.css" />
 </head>
 
 <body>
     <div class="container">
-        <div class="column" id="column1">
-           <h1 id="heading1">Hello</h1>
+        <div class="columncookie" id="columncookie">
+           <h1 id="heading1">Cookies</h1>
+           <p style="text-align: center;">
+                Chocolate chip cookies are classic, golden-brown delights with a soft, chewy center and lightly crisp edges. <br> 
+                Each bite offers a perfect balance of buttery sweetness and chocolatey indulgence. <br>
+                Warm, aromatic, and irresistibly comforting, these cookies are a timeless favorite in every kitchen. <br>
+            </p>
+           <img src="cookies.jpg" alt="Chocolate Chip Cookies" width="250" height="300">
+            <p button id="button1" class="button">Change Me</button></p>
         </div>
 
-         <div class="column" id="column2">
-            <h1 id="heading2">World</h1>
+         <div class="columncake" id="columncake">
+            <h1 id="heading2">Cake</h1>
+            <p style="text-align: center;">
+                Chocolate cake is a rich, moist, and fluffy dessert with deep chocolate flavor. <br>
+                Each slice is soft and tender, often layered or topped with smooth, creamy chocolate frosting. <br>
+                Sweet, indulgent, and perfectly chocolatey, it's a classic treat for any occasion. <br>
+            </p>
+            <img src="cake.jpg" alt="Chocolate Cake" width="250" height="300">
+            <p button id="button2" class="button">Change Me</button></p>
          </div>
     </div>
 </body>
+
+    <script>
+        function changeButtonColor() {
+            document.getElementById("button1").style.backgroundColor = 'pink' }
+        {    
+            document.getElementById("button1").onclick = changeButtonColor }
+
+</script>
+
+
+
 
 </html>
