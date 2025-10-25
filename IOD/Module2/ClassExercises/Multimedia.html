@@ -1,0 +1,46 @@
+<!-- put audio, videos and html file in one folder (assests)-->
+ <!--SAMPLE-->
+ <body>
+    <section>Audio:</section>
+        <audio src="./assets/nameofaudio.mp3" controls></audio>
+    </section>
+
+    <section>
+        <label>Video:</label>
+        <video src="./assests.mp4" controls></video> <!-- need attribute contols to play -->
+    </section>
+
+<!--or use this-->
+    <section>
+        <label>video:</label>
+        <video controls>
+        <source src="./assests.mp4" type="filename.mp4">
+        </video>
+    </section>
+
+    <section>
+        <button onclick="PlayVideo()">Play</button>
+        <button onclick="PauseVideo()">Pause</button>
+    </section>
+
+</body>
+
+<script>
+    function playvideo() {
+        document.getElementById("video1").play()
+    }
+
+    function pausevideo () {
+        document.getElementById("video1").pause()
+    }
+</script>
+
+
+<!-- figcaption displays the description of an image (ex. appears under the image below). Sample:-->
+ <section>
+    <figure>
+        <img src="url of image here" alt="description of image here">
+        <figcaption>description of photo here</figcaption>
+    </figure>
+</section>
+

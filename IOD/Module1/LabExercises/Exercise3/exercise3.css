@@ -5,14 +5,14 @@
     display: flex; 
     min-height: 100vh; 
     align-items: stretch; }
-.columncookie { 
+.columnCookie { 
     background: goldenrod; 
     display:flex; 
     flex-direction: column; 
     justify-content:center; 
     align-items: center; 
     flex: 1; }
-.columncake { 
+.columnCake { 
     background: goldenrod; 
     display:flex; 
     flex-direction: column; 

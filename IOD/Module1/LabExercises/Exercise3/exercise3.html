@@ -9,18 +9,18 @@
 
 <body>
     <div class="container">
-        <div class="columncookie" id="columncookie">
+        <div class="columnCookie" id="columnCookie">
            <h1 id="heading1">Cookies</h1>
            <p style="text-align: center;">
                 Chocolate chip cookies are classic, golden-brown delights with a soft, chewy center and lightly crisp edges. <br> 
                 Each bite offers a perfect balance of buttery sweetness and chocolatey indulgence. <br>
                 Warm, aromatic, and irresistibly comforting, these cookies are a timeless favorite in every kitchen. <br>
             </p>
-           <img src="cookies.jpg" alt="Chocolate Chip Cookies" width="250" height="300">
-            <p button id="button1" class="button">Change Me</button></p>
+            <img src="cookies.jpg" alt="Chocolate Chip Cookies" width="250" height="300">
+            <p><button type= "button" id="button1" class="button" onclick="changeColumnCookie()">Change Me</button></p>
         </div>
 
-         <div class="columncake" id="columncake">
+         <div class="columnCake" id="columnCake">
             <h1 id="heading2">Cake</h1>
             <p style="text-align: center;">
                 Chocolate cake is a rich, moist, and fluffy dessert with deep chocolate flavor. <br>
@@ -28,20 +28,12 @@
                 Sweet, indulgent, and perfectly chocolatey, it's a classic treat for any occasion. <br>
             </p>
             <img src="cake.jpg" alt="Chocolate Cake" width="250" height="300">
-            <p button id="button2" class="button">Change Me</button></p>
+            <p><button type= "button" id="button2" class="button" onclick="changeColumnCake()">Change Me</button></p>
          </div>
     </div>
+
 </body>
 
-    <script>
-        function changeButtonColor() {
-            document.getElementById("button1").style.backgroundColor = 'pink' }
-        {    
-            document.getElementById("button1").onclick = changeButtonColor }
-
-</script>
-
-
-
+<script src="exercise3.js"></script>
 
 </html>

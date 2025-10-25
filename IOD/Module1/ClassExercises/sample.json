@@ -1,4 +1,7 @@
 {
-    "firstname": "Pia",
-    "lastname": "Valente"
+    "firstName": "Pia";
+    "lastName": "Valente";
+
 }
+
+console.log(firstName)

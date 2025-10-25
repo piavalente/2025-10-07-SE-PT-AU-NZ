@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Exercise Dice Generator</title>
+    <link rel="stylesheet" href="exercise8.css"/> <!-- do css later-->
+</head>
+
+<body>
+    <header class="Header">DICE GENERATOR</header> <!--Header-->
+    
+    <div id="DiceResult"></div> <!--Result of random number goes here-->
+    
+    <p style="color: white; font-family: Tahoma; font-size: 12px">Select number of sides</p>
+
+    <div> <!--Drop down menu 6 or 10-->
+            <select id="SelectDice" class="dropdown">
+                <option>6</option>
+                <option>10</option>
+            </select>        
+    </div>
+
+    <div> <!--Button to roll the dice-->
+        <button type="button" onclick="generateRandomNumber()" id="button1" class="button">Roll Dice</button>
+    </div>
+   
+    <script>
+    function generateRandomNumber() {
+        let dice = document.getElementById("SelectDice")
+        let sides = Number(dice.value) //I googled how to do this
+        let randomNum = Math.floor(Math.random() * sides) + 1; //and this
+
+        document.getElementById("DiceResult").innerHTML = " " + randomNum //and this
+    }
+    </script>
+
+
+
+    
+
+
+
+</body>
+</html>
