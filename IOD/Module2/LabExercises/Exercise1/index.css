@@ -1,0 +1,22 @@
+article {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid black;
+
+}
+
+.me1 {
+    color: red !important;
+}
+
+#me2 {
+    color: blue;
+}
+
+
+.me1, #me2 {     /*dont forget the comma if styling more than one different elements*/
+    color: purple
+}
+
+
+

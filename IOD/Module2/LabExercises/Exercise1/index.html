@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="My name is Pia and I am learning HTML">
+  <meta name="keywords " content="practice html, web design">
+  <meta name="author" content="Pia Valente">
+  <meta name="viewport" content="width=device-width, initial-scale.1.0">
+  <title>Practice HTML</title>
+  <link rel="stylesheet" href="index.css">
+
+  <style>
+    table, th, td {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="form.html">Form</a>
+  </nav>
+
+<main>  
+<article class="me1">                    <!--everything is under article1-->
+  <div>HTML</div>
+    <p>Twinkle, twinkle little star <span style="font-family: Arial, Helvetica, sans-serif; font-size: 20px; color: blue;">Up above the world so high</span></p>
+  <div>CSS</div>
+    <p>Incy wincy spider <span style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 30px; color: blueviolet;">Climbed up the water spout</span></p>
+  <div>JavaScript</div>
+    <p>Hickory dickory dock <span style="color: brown; font-size: 10px; font-family: 'Times New Roman', Times, serif;">The mouse ran up the clock</span></p>
+  </div>
+
+  
+  <p>p represents paragraph     without preserving      spacing</p> <!-- this one will change to proper spacing-->
+  <pre>
+    Text in         a pre element <!--this one retains spacing, how it was written-->
+    is displayed in a fixed-width
+    font, and it preserves
+    both      spaces and
+    line breaks
+  </pre>
+  </div>
+
+<h1 class="style-me1">My HTML Learning Journey</h1>
+
+<h2 id="style-me2">Learning elements: div, span, p, pre, ul, li, ol, article</h2>
+
+<ul>Countries in Asia 
+  <li>Philippines</li>
+  <li>Japan</li>
+  <li>Thailand</li>
+  <li>China
+    <ol>
+      <li>Beijing</li>
+      <li>Shanghai</li>
+    </ol>
+  </li>
+</ul>
+
+<ol>Countries in Europe
+  <li>Germany</li>
+  <li>Switzerland</li>
+  <li>France</li>
+</ol>
+</article>
+
+<article id="me2" class="box">  <!--This is another article-->
+  <h2>Learning elements: tables</h2>
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2">Fruits</th>
+        <th>Vegetables</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Apple</td>
+        <td>Carrot</td>
+        <td rowspan="2"></td>
+      </tr>
+      <tr>
+        <td>Banana</td>
+        <td>Broccoli</td>
+      </tr>
+      <tr>
+        <td>Orange</td>
+        <td>Lettuce</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+
+<article>
+  <h2>Learning elements:img, video, audio</h2> <!--another article-->
+  <img src="https://picsum.photos/400/400" alt="a random picture" width="300" height="300">
+  <img src="./assets/html_lab_image.jpg" alt="picture of the sky" width="180" height="300">
+  <video controls width="250">
+      <source src="/assets/flower.webm" type="video/webm">
+      Sorry, your browser doesn't support embedded videos. </video>
+  <audio controls src="/assets/t-rex-roar.mp3">
+    Your browser does not support the <code>audio</code> element. </audio>
+</article>
+
+
+
+
+
+
+
+
+
+
+</main>
+
+<footer>Copyright &copy; 2024</footer>
+</body>
+
+</html>

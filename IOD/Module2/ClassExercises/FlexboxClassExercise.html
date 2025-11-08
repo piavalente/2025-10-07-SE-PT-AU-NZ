@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* adjust these styles to use flexbox and experiment with various property values */
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            font-size: 18px;
+        }
+        
+        header {
+            background: black;
+            padding: 1em;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        #logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #B200FF;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 10;
+            color: yellow;
+            display: flex;
+            gap: 1em;
+            align-items: center;
+           
+        }
+
+        main {
+            max-width: 80%;
+            margin: 1em auto;
+        }
+        
+        #boxes {
+            display: flex;
+            align-items: center;
+        }
+       
+
+        .box {
+            border-radius: 1em;
+            min-width: 300px;
+            min-height: 300px;
+            border: 2px solid #404040;
+            background: #B2B2B2;
+            margin: 1em;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <header> <!-- flex container #1 -->
+        <div id="logo"></div>
+        <nav id="main-menu">
+            <ul class="menu"> <!-- flex container #2 -->
+                <li>Menu #1</li>
+                <li>Menu #2</li>
+                <li>Menu #3</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="boxes"> <!-- flex container #3 -->
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+        </section>
+    </main>
+</body>
+</html>

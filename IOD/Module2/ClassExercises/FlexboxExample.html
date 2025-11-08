@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    :root {
+        --primary-color:green;        /*good to use for commonly repeated items*/
+        --secondary-color: pink;      /*must be on top most space of <style>*/
+        --border:
+        --spacing /*var*/:29px /*content*/
+
+    }
+
+    .container {   /*main property*/
+        width: 50%;
+        border: 2px solid red;
+        display: flex;
+        flex-direction: column;  /*defines direction*/
+        flex-wrap: wrap;  
+        justify-content: space-evenly
+    }
+    .child {
+        width: 150px;
+        height: 150px;
+        background-color: blue;
+        padding: 10px;
+        text-align:center;
+        color:white;
+        border: 1px solid black;
+        font-size:20px;
+    }
+    
+</style>
+<body>
+    <div class="container">
+        <div class="child">
+            First
+        </div>
+        <div class="child">
+            Second
+        </div>
+        <div class="child">
+            Third   
+        </div>
+        <div class="child">
+            Fourth
+        </div>
+        <div class="child">
+            Fifth
+        </div>
+       <div class="child">
+            Sixth
+        </div>
+        <div class="child">
+            Seventh
+        </div>
+    </div>
+</body>
+</html>

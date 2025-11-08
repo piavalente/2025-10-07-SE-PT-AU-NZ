@@ -1,0 +1,135 @@
+.class {
+    margin: 20px;
+    margin: 10px;
+    margin: 30px;
+}
+
+
+/* I. Selectors */
+/* Put styles for questions 1.1, 1.2, 1.3 and 1.4 here */
+
+article {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.style-me1 {
+    color: red;
+}
+
+#style-me2 {
+    color: blue;
+}
+
+.style-me1, #style-me2 {
+    color: purple;
+}
+
+/* Put styles for questions 2.1 and 2.2 here */
+
+.my-children-are-styled p {
+    background-color: red;
+}
+
+.my-descendants-are-styled > p {
+    background-color: lightgreen;
+}
+
+/* II. Box model and common properties */
+/* Put styles for questions 1-8 here */
+
+.box {
+    background-color: lightblue;
+    margin: 10px;           /*space between each paragraph*/
+    padding: 8px 20px 2px;  /*top,left, bottom*/
+    width: 10%;             /*contents of box wraps when screen size changes while on vw vh*/
+    height: 25px;
+    border: 10px solid pink;
+    border-radius: 50px;
+    box-sizing: content-box;
+    overflow: auto;
+    outline: 10px;
+    background-image: url(img1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* III. Positioning */
+/* Put styles for questions 1-3 here */
+
+.position-absolute {
+    position: absolute;
+    top: 0;
+    left: 80px;
+    right: 100px;
+    background-color: orange;
+}
+
+.position-relative {
+    position: relative;
+    background-color: yellow;
+    
+}
+
+.position-sticky {
+    position: sticky;                   
+    background-color: green;
+    top: 20px;                  /*will not work without position value*/
+}   
+
+/* IV. Styling text */
+/* Put styles for questions 1-10 here */
+
+.text-style{
+    color: green;
+    font-size: 16px;
+    line-height: 50px;
+    font-weight: regular 400;
+    font-family: "Momo Trust Display";
+    text-align: right;
+    letter-spacing: 1px;
+    word-spacing: 10px;
+    text-transform: uppercase;
+    text-decoration: line-through;
+}
+
+/* V. Styling links */
+/* Put styles for questions 1-3 here */
+
+a, a:link {
+    color: pink;
+    font-size: large;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+    color: blue;
+    text-decoration:line-through;
+}
+
+a:visited {
+    color: brown;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   /*this one does not really worl*/
+}
+
+/* VI. calc() */
+/* Put styles for questions 1-3 here */
+
+.calc-style {
+    width: 100vw;
+    background-color: coral;
+    width: calc(100vw-100px);
+}
+
+.fixed-width-col {
+    width: 350px;
+    display: inline-block;
+}
+
+.fluid-col {
+    display: inline-block;
+    width: calc(100vw - 350px);
+}

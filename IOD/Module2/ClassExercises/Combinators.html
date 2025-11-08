@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    section {                                           /*everything in this section will be styled like this*/                      
+        background-color: aliceblue;
+        color: blue !important;  /*putting !important will retain the style*/
+    }
+
+    .class1 {
+        color: red;
+    }
+
+    #div1 {
+        color: green;
+    }
+
+    section /*parent*/ div2 /*type*/ {         /* div2 of the section*/
+        color:gray;
+    }
+
+    .section1 .class1 {
+        color: aquamarine;
+    }
+
+    p::before {
+        content:"-->"; /*will include a SYMBOl or IMAGE before the paragraph.*/
+    }
+
+    p::after {
+        content:"--END--"; /*This is a pseudo element*/
+    }
+
+    p::first-letter {
+        font-size: x-large;
+        color: red;
+    }
+
+    .underlined {
+        text-decoration: underline;
+    }
+</style>
+
+
+<body>
+    <section class="section1">                                                       <!--this is the parent of h1 and div-->
+        <h1 class="class1">Main section of the web page</h1>
+        <div id="div1" style="color:brown">
+            Information about the main in the detail.
+        </div>
+        <div id="div2">
+            Second section of the main section
+            <div>
+                sub div of div2
+            </div>
+        </div>
+        <div>
+            Third section of the main section
+        </div>
+    </section>
+        <P>
+            first paragraph
+        </P>
+        <p class="underlined">
+            second paragraph
+        </p>
+</body>
+</html>

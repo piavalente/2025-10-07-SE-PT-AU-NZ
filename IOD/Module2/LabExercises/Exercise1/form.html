@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="form.html">Form</a>
+  </nav>
+  <main>
+<article>
+    <h2>Learning elements: Forms-form, input, label, select, option, button</h2>
+    <form>
+        <form method="POST" action="http://localhost:3000/profile"></form>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" placeholder="Enter your name">
+            </div>
+
+            <div>
+                <label for="email">Email:</label>
+                <input type="text" placeholder="Enter your email address">
+            </div>
+
+            <div>
+                <input type="radio" name="language" value="HTML">
+                <label for="html">HTML</label>
+               
+                <input type="radio" name="language" value="CSS">
+                <label for="css">CSS</label>
+                
+                <input type="radio" name="language" value="JavaScript">
+                <label for="javascript">JavaScript</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="vehicle" value="Toyota">
+                <label for="html">Toyota</label>
+               
+                <input type="checkbox" name="vehicle" value="Audi">
+                <label for="css">Audi</label>
+                
+                <input type="checkbox" name="vehicle" value="Honda">
+                <label for="javascript">Honda</label>
+            </div>
+
+            <div>
+                <label for="cars">Choose a car:</label>
+                <select name="cars">
+                    <option value="Toyota">Toyota</option>
+                    <option value="Audi">Audi</option>
+                    <option value="Honda">Honda</option>
+                </select>
+            </div>
+
+            <div>
+                <button type="submit">Submit Form</button>
+            </div>
+
+</article>
+  </main>
+
+  <footer>Copyright &copy; 2024</footer>
+</body>
+
+</html>
