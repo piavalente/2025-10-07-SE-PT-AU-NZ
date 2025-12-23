@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moment JS</title>
+
+    <!-- Load Moment.js FIRST -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+  </head>
+
+  <body>
+    <div id="dateShown"></div>
+
+    Guess my birthday:
+    <div id="birthday"></div>
+
+    <!-- Your JS runs AFTER the div exists -->
+    <script>
+      document.getElementById("dateShown").innerText = moment().format("dddd");
+      document.getElementById("birthday").innerText = moment(
+        "20000701",
+        "YYYYMMDD",
+      ).fromNow();
+    </script>
+  </body>
+</html>

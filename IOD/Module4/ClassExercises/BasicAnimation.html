@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Animation</title>
+  </head>
+  <style>
+    p {
+      /*applied to the paragraph*/
+      animation-name: slidedown;
+      animation-duration: 10s;
+      animation-iteration-count: 5;
+    }
+
+    @keyframes slider {
+      0% {
+        /*starting point. before animation*/
+        margin-left: 0;
+        background-color: red;
+      }
+
+      50% {
+        /*half-way through animation*/
+        font-size: x-large;
+        background-color: orange;
+      }
+
+      100% {
+        /* end of animation*/
+        margin-left: 100%;
+        background-color: blue;
+      }
+    }
+
+    @keyframes slidedown {
+      from {
+        margin-top: 0%;
+        background-color: violet;
+      }
+      to {
+        margin-top: 100%;
+        background-color: orange;
+      }
+    }
+  </style>
+  <body>
+    <p>Hello World!</p>
+  </body>
+</html>

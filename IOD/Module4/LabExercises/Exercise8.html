@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 8: Luxon Dates</title>
+    <script src ="https://cdn.jsdelivr.net/npm/luxon@3.5.0/build/global/luxon.min.js"></script>
+</head>
+<body>
+    <div id="Problem1">
+    <p>1. Number of days betweeen my birthdate and the current date is:</p>
+    <p id = "Result1"></p>
+    </div>
+    
+    <div id="Problem2">
+    <p>2. Number of years, months and days between my birthdate and current date is:</p>
+    <p id = "Result2"></p>
+    </div>
+    
+    <div id="Problem3"></div>
+    <p> 3. The date closest to the current date is:</p>
+    <p id = "Result3"></p>
+    </div>
+
+    <div id="Problem4"></div>
+    <p> 4. The first date is before or after?</p>
+    <p id = "Result4"></p>
+    </div>
+
+    <div id="Problem5"></div>
+    <p> 5. The time in London is:</p>
+    <p id = "Result5"></p>
+    </div>
+
+</body>
+<script>
+    const DateTime = luxon.DateTime;
+    
+    //Problem 1
+    const end = DateTime.now();
+    const start = DateTime.fromISO('1990-12-24');
+    const diffInDays = end.diff(start, 'days').toObject();
+
+    document.getElementById("Result1").innerText = Math.floor(diffInDays.days) + " days";
+
+    //Problem 2
+    const end2 = DateTime.now();
+    const start2 = DateTime.fromISO('1990-12-24');
+    const diff = end.diff(start, ['years', 'months', 'days']).toObject();
+
+    document.getElementById("Result2").innerText =
+        Math.floor(diff.years) + " years, " +
+        Math.floor(diff.months) + " months, " +
+        Math.floor(diff.days) + " days";
+
+    //Problem 3
+    const date1 = DateTime.fromISO('1986-09-08');
+    const date2 = DateTime.fromISO('1990-12-24');
+    const date3 = DateTime.now();
+
+    const closestDate =
+    Math.abs(date1.diff(date3).milliseconds) < Math.abs(date2.diff(date3).milliseconds)
+        ? date1
+        : date2;
+
+    document.getElementById("Result3").innerText = closestDate.toFormat('dd MMMM, yyyy');
+
+    //Problem 4
+    const date4 = DateTime.fromISO('1986-09-08');
+    const date5 = DateTime.fromISO('1990-12-24');
+
+    let message = '';
+
+        if (date1 < date2) {
+            message = 'The first date is before the second date.';
+        } else if (date1 > date2) {
+            message = 'The first date is after the second date.';
+        } else {
+            message = 'Both dates are the same.';
+        }
+
+    document.getElementById('Result4').innerText = message;
+
+    //Problem 5
+    const london = DateTime.now().setZone("Europe/London");
+    document.getElementById("Result5").innerText = london.toFormat('dd MMMM yyyy, HH:mm:ss');
+
+</script>
+</html>

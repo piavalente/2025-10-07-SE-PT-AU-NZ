@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 3: Artists Portfolio</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #e3f2fd;
+    }
+    .artist {
+      padding: 10px;
+    }
+    .artist-name {
+      font-weight: 600;
+      font-size: 3em;
+      padding: 0 0 10px 0;
+    }
+    .artist-portfolio {
+      font-weight: 400;
+      font-size: 2em;
+    }
+  </style>
+
+  <body>
+    <template id="artist-template">
+      <div class="artist">
+        <div class="artist1">
+          <div class="artist-name"></div>
+          <div class="artist-portfolio"></div>
+        </div>
+      </div>
+    </template>
+
+    <div id="artist-list"></div>
+
+    <script>
+      const artist = [
+        {
+          name: "Van Gogh",
+          portfolio: [
+            {
+              title: "Portrait",
+              url: "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436532/1671316/main-image",
+            },
+            {
+              title: "Sky",
+              url: "https://mymodernmet.com/wp/wp-content/uploads/2020/11/White-house-night-van-goh-worldwide-2.jpg",
+            },
+          ],
+        },
+      ];
+
+      const artist2 = [
+        {
+          name: "Picasso",
+          portfolio: [
+            {
+              title: "The Old Guitarist",
+              url: "https://www.artchive.com/wp-content/uploads/2023/04/The-Old-Guitarist-PICASSO-Pablo-1903-3-1.jpg",
+            },
+            {
+              title: "Three Musicians",
+              url: "https://www.artchive.com/wp-content/uploads/2023/04/Three-Musicians-Picasso-Pablo-1921-2.jpg",
+            },
+          ],
+        },
+      ];
+
+      function addArtist(artistName, artistPortfolio) {
+        const template = document
+          .getElementById("artist-template")
+          .content.cloneNode(true);
+
+        //NAME: Van Gogh, Picasso
+        template.querySelector(".artist-name").innerText =
+          "Name: " + artistName;
+
+        //PORTFOLIO
+        const portfolioHTML = artistPortfolio
+          .map(
+            (portfolio) =>
+              `<a href="${portfolio.url}" target="_blank">${portfolio.title}</a>`
+          )
+          .join(", ");
+        template.querySelector(".artist-portfolio").innerHTML =
+          "Portfolio: " + portfolioHTML;
+
+        //APPEND
+        document.querySelector("#artist-list").appendChild(template);
+      }
+
+      //loop through the date - use .join to combine items
+      artist.forEach((artist) => addArtist(artist.name, artist.portfolio));
+      artist2.forEach((artist) => addArtist(artist.name, artist.portfolio));
+    </script>
+  </body>
+</html>

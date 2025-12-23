@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 4: Display Cards Bootstrap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <h1 class="display-1 text-center mb-4">Children's Books</h1>
+
+    <!--NAV BAR-->
+    <nav class="navbar navbar-light bg-light mb-4">
+      <div class="container-fluid">
+        <a class="navbar-brand">Classic Children's Story Books</a>
+        <form class="d-flex">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <!--TEMPLATE FOR CARDS-->
+    <!--Enjoyed this part. I got to explore and play around with Bootstrap codes-->
+
+    <div class="container px-lg-5 my-5">
+      <div class="row" id="book-list"></div>
+    </div>
+
+    <template id="childrensBook-template">
+      <div class="col-12 col-md-6 col-lg-3 mb-4">
+        <div class="card h-100">
+          <img src="" class="card-img-top img-fluid" style="height: 300px" />
+          <div class="card-body d-flex flex-column flex-grow-1"> <!--card is flexed vertically-->
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-primary w-100 mt-auto">Purchase Book</a>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <!--END OF TEMPLATE-->
+
+    <div id="book-list" class="row justify-content-center"></div>
+    <!--append this-->
+
+    <script>
+      function addBook(imageLink, bookTitle, bookDescription) {
+        //arrange accordingly
+        const template = document.getElementById("childrensBook-template").content.cloneNode(true);
+
+        template.querySelector(".card-img-top").src = imageLink;
+        template.querySelector(".card-title").innerText = bookTitle;
+        template.querySelector(".card-text").innerText = bookDescription;
+
+        document.querySelector("#book-list").appendChild(template);
+      }
+
+      addBook(
+        "https://d2mscww4e13h9c.cloudfront.net/book_cover_image/9781954738591.jpg",
+        "Three Little Pigs",
+        "Three pigs build homes, and only the strongest one protects them from a wolf.",
+      );
+
+      addBook(
+        "https://d2mscww4e13h9c.cloudfront.net/book_cover_image/9781954738607.jpg",
+        "Goldilocks and the Three Bears",
+        "A girl enters a bears' home and learns a lesson about curiosity and respect.",
+      );
+
+      addBook(
+        "https://bookelicious-prod-django-admin.s3.amazonaws.com/book_cover_image/9781589254572.gif",
+        "Little Red Riding Hood",
+        "A young girl meets a wolf on her way to her grandmother's house, leading to a dangerous encounter.",
+      );
+
+      addBook(
+        "https://d2mscww4e13h9c.cloudfront.net/book_cover_image/9781786288417.jpg",
+        "Jack and the Beanstalk",
+        "A boy climbs a magic beanstalk to a giant's castle and finds adventure high in the clouds",
+      );
+
+      addBook(
+        "https://bookelicious-prod-django-admin.s3.amazonaws.com/book_cover_image/9781515804154.gif",
+        "Hansel and Gretel",
+        "A brother and sister get lost in the forest and discover a witch’s candy house, but they outsmart her to escape.",
+      );
+
+      addBook(
+        "https://bookelicious-prod-django-admin.s3.amazonaws.com/book_cover_image/9780142413937.gif",
+        "The Princess and the Pea",
+        "Only by feeling a pea through twenty mattresses and twenty featherbeds can a girl prove she is a real princess.",
+      );
+
+      addBook(
+        "https://d2mscww4e13h9c.cloudfront.net/book_cover_image/9781786289681.jpg",
+        "The Gingerbread Man",
+        "A gingerbread man comes to life, runs away from everyone who tries to catch him, but is ultimately outwitted by a fox.",
+      );
+
+      addBook(
+        "https://d2mscww4e13h9c.cloudfront.net/book_cover_image/9781681528120.jpg",
+        "The Frog Prince",
+        "A spoiled princess reluctantly befriends a frog, who magically transforms into a prince after she keeps her promise.",
+      );
+    </script>
+  </body>
+</html>

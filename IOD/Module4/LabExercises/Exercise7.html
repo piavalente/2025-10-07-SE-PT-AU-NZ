@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 7: CSS Animation</title>
+
+    <style>
+      .square {
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        position: relative;
+        animation-name: topBottom;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      @keyframes topBottom {
+        0% {
+          background-color: red;
+          top: 0px;
+        }
+
+        20% {
+          background-color: orange;
+          top: 100px;
+        }
+
+        40% {
+          background-color: yellow;
+          top: 200px;
+        }
+
+        60% {
+          background-color: green;
+          top: 300px;
+        }
+
+        80% {
+          background-color: blue;
+          top: 400px;
+        }
+
+        100% {
+          background-color: purple;
+          top: 500px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <br />
+    <div class="square"></div>
+  </body>
+</html>
