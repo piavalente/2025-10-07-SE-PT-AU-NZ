@@ -1,0 +1,188 @@
+[
+    {
+        "Title": "The Gruffalo",
+        "Author": ["Julia Donaldson"],
+        "Category": ["Fantasy"], 
+        "Origin": "UK",
+        "Language": "English",
+        "Image": "./BookImages/The Gruffalo.jpg",
+        "Button": "https://www.gruffalo.com"
+    },
+
+    {
+        "Title": "Room on the Broom",
+        "Author": ["Julia Donaldson"],
+        "Category": ["Fantasy"],
+        "Origin": "UK",
+        "Language": "English",
+        "Image": "./BookImages/Room On The Broom.jpg",
+        "Button": "https://assets-eu-01.kc-usercontent.com/bef5ce1d-bc10-01bc-92d5-0aa8d9dab1bd/03c0447f-e39a-4961-87ab-e8d0817e7db0/Room%20on%20the%20Broom%20-%20Activity%20Sheets_FINAL.pdf"
+    },
+
+    {
+        "Title": "Zog",
+        "Author": ["Julia Donaldson"],
+        "Category": ["Fantasy"],
+        "Origin": "UK",
+        "Language": "English",
+        "Image": "./BookImages/Zog.jpeg",
+        "Button": "https://www.forestryengland.uk/family-activity/zog-activity-sheets"
+    },
+
+    {
+        "Title": "Jingle Bells, Rudolph Smells",
+        "Author": ["Deanno Yipadee", "Paul Beavis"],
+        "Category": ["Singalong", "Celebrations and Holidays", "Humorous"], 
+        "Origin": "New Zealand",
+        "Language": "English",
+        "Image": "./BookImages/Jingle Bells, Rudolph Smells.jpg",
+        "Button": null
+        
+    },
+
+    {
+        "Title": "Nee Naw the Little Fire Engine",
+        "Author": ["Deanno Yipadee", "Paul Beavis"],
+        "Category": ["Vehicles", "Fantasy", "Singalong"],
+        "Origin": "New Zealand",
+        "Language": "English",
+        "Image": "./BookImages/Nee Naw the Little Fire Engine.jpg"
+       
+        
+    },
+
+    {
+        "Title": "Hairy Toe",
+        "Author": ["Daniel Postgate"],
+        "Category": ["Fantasy"],
+        "Origin": "UK",
+        "Language": "English",
+        "Image": "./BookImages/Hairy Toe.jpeg"
+       
+    },
+
+    {
+        "Title": "Hairy Maclary from Donaldson's Dairy",
+        "Author": ["Lynley Todd"],
+        "Category": ["Nature and Animals", "Fantasy"],
+        "Origin": "New Zealand",
+        "Language": "English",
+        "Image": "./BookImages/Hairy Maclary from Donaldson's Dairy.jpeg"
+       
+    },
+
+    {
+        "Title": "Brown Bear, Brown Bear, What Do You See?",
+        "Author": ["Bill Martin Jr", "Eric Carle"],
+        "Category": ["Nature and Animals", "Concept Books"],
+        "Origin": "USA",
+        "Language": "English",
+        "Image": "./BookImages/Brown Bear.jpg"
+      
+        
+    },
+
+    {
+        "Title": "The Very Hungry Caterpillar",
+        "Author": ["Eric Carle"],
+        "Category": ["Nature and Animals", "Concept Books"],
+        "Origin": "USA",
+        "Language": "English",
+        "Image": "./BookImages/The Very Hungry Caterpillar.JPG"
+      
+    },
+
+    {
+        "Title": "Goodnight, Moon",
+        "Author": ["Margaret Wise Brown"],
+        "Category": ["Realistic Fiction"],
+        "Origin": "USA",
+        "Language": "English",
+        "Image": "./BookImages/Goodnight Moon.jpg"
+    
+        
+    },
+
+    {
+        "Title": "How Do I Feel",
+        "Author": ["Rebekah Lipp"],
+        "Category": ["Realistic Fiction", "Socio Emotional"],
+        "Origin": "New Zealand",
+        "Language": "English",
+        "Image": "./BookImages/How Do I Feel.png"
+      
+
+    },
+
+    {
+        "Title": "The Wonky Donkey",
+        "Author": ["Craig Smith"],
+        "Category": ["Fantasy", "Nature and Animals"],
+        "Origin": "New Zealand",
+        "Language": "English",
+        "Image": "./BookImages/The Wonky Donkey.png"
+       
+    },
+
+    {
+        "Title": "Shark in the Park",
+        "Author": ["Nick Sharratt"],
+        "Category": ["Humorous"],
+        "Origin": "UK",
+        "Language": "English",
+        "Image": "./BookImages/Shark in the Park.jpg"
+       
+
+    },
+
+    {
+        "Title": "Whai Mai",
+        "Author": ["Sharon Holt"],
+        "Category": ["Singalong", "Realistic Fiction"],
+        "Origin": "New Zealand",
+        "Language": "English, Te Reo",
+        "Image": "./BookImages/Whai Mai.png"
+    
+    },
+
+    {
+        "Title": "Matariki",
+        "Author": ["Sharon Holt"],
+        "Category": ["Singalong", "Celebrations and Holidays"],
+        "Origin": "New Zealand",
+        "Language": "English, Te Reo",
+        "Image": "./BookImages/Matariki.png"
+ 
+    },
+
+    {
+        "Title": "Maranga Mai",
+        "Author": ["Sharon Holt"],
+        "Category": ["Singalong", "Nature and Animals"],
+        "Origin": "New Zealand",
+        "Language": "English, Te Reo",
+        "Image": "./BookImages/Maranga Mai.png"
+     
+    },
+
+    {
+        "Title": "How Maui Slowed the Sun",
+        "Author": ["Peter Gossage"],
+        "Category": ["Maori"],
+        "Origin": "New Zealand",
+        "Language": "English, Te Reo",
+        "Image": "./BookImages/How Maui Slowed the Sun.jpg"
+   
+    },
+
+    {
+        "Title": "Maisy's Chinese New Year",
+        "Author": ["Lucy Cousins"],
+        "Category": ["Celebrations and Holidays"],
+        "Origin": "UK",
+        "Language": "English",
+        "Image": "./BookImages/Maisy's Chinese New YEar.jpeg"
+
+    }
+]
+

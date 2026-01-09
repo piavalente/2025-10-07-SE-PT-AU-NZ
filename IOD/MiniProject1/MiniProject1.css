@@ -1,0 +1,33 @@
+body {
+  background-color: #FFDA7A
+  
+}
+
+
+.caveat {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: italic;
+}
+
+h1 {
+  font-family: "caveat";
+  color: black
+}
+
+.navbar {
+    background-color: #FFDA7A !important;
+    font-family: "Caveat", cursive;
+    font-size: 24px;
+}
+
+a {
+    color: inherit;  
+    text-decoration: none;  
+}
+
+.footer{
+   background-color: #f1c554 !important;
+}
+
