@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator web page</title>
+</head>
+<body>
+    <div style="display:flex; justify-content:center;">
+         <h2>Calculator</h2>
+    </div>
+    
+    <div style="display:flex; flex-direction:column; justify-content:center; align-items:center; gap:10px;">
+        <div>
+            <label for="num1">Enter number 1:</label>
+            <input type="number" name="num1" id="num1">
+        </div>
+        <div>
+            <label for="num2">Enter number 2:</label>
+            <input type="number" name="num2" id="num2">
+        </div>
+        <div>
+            <button onclick="calculate('Add')">Add</button>
+            <button onclick="calculate('Subtract')">Subtract</button>
+            <button onclick="calculate('Multiply')">Multiply</button>
+            <button onclick="calculate('Divide')">Divide</button>
+        </div>
+        <div>
+            <label>Result:</label>
+            <label id="result"></label>
+        </div>
+    </div>
+
+<script>
+function calculate(operation) {
+    let num1 = document.getElementById("num1").value;
+    let num2 = document.getElementById("num2").value;
+    fetch(`http://127.0.0.1:3005/calculator/${operation}?num1=${num1}&num2=${num2}`)
+        .then(response => response.json())
+        .then(json => document.getElementById("result").innerText = json.res)
+}
+
+</script>
+</body>
+</html>
+

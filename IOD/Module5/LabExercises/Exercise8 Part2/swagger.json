@@ -1,0 +1,48 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "My Calculator Project",
+    "description": "My User Project Application API",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:3010",
+  "basePath": "/",
+  "schemes": ["http"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "tags": [
+    {
+      "name": "Fake Store",
+      "description": "API for Fake Store in the system"
+    }
+  ],
+  "paths": {
+    "/products": {
+      "get": {
+        "tags": ["Fake Store"],
+        "summary": "Get all products",
+        "description": "Returns a list of all products",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/products/categories": {
+      "get": {
+        "tags": ["Fake Store"],
+        "summary": "Get all product categories",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    }
+  }
+}
