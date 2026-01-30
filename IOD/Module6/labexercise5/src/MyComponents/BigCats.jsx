@@ -1,0 +1,99 @@
+import { useState } from "react";
+import SingleCat from "./SingleCat";
+import AddCatForm from "./AddCatForm";
+import "../App.css";
+
+function BigCats() {
+    const cats = [
+        { id: 1, name: 'Cheetah', latinName: 'Acinonyx jubatus', imageURL: "https://seethewild.org/wp-content/uploads/2024/11/jean-wimmerlin-U66avewmxJk-unsplash-1.jpg" },
+        { id: 2, name: 'Cougar', latinName: 'Puma concolor', imageURL: "https://animals.sandiegozoo.org/sites/default/files/2016-11/animals_hero_mountainlion%20copy.jpg" },
+        { id: 3, name: 'Jaguar', latinName: 'Panthera onca', imageURL: "https://lazoo.org/wp-content/uploads/2020/02/Jaguar-Female-JEP_6234-1.jpg" },
+        { id: 4, name: 'Leopard', latinName: 'Panthera pardus', imageURL: "https://www.worldlandtrust.org/wp-content/uploads/2020/09/A-leopard-page.jpg"},
+        { id: 5, name: 'Lion', latinName: 'Panthera leo', imageURL: "https://www.krugerpark.co.za/images/black-maned-lion-shem-compion-786x500.jpg"},
+        { id: 6, name: 'Snow leopard', latinName: 'Panthera uncia', imageURL: "https://cdn.britannica.com/52/170952-050-A545E35D/carnivore-Snow-leopard-regions-subcontinent-Asia-Indian.jpg"},
+        { id: 7, name: 'Tiger', latinName: 'Panthera tigris', imageURL: "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/1600/900/75/dam/wdpro-assets/parks-and-tickets/attractions/animal-kingdom/disney-animals/disney-animals-asian-sumatran-tigers/disney-animals-asian-sumatran-tigers-00.jpg?1658996208764"},
+    ];
+
+    //BUTTON STYLE
+    const buttonStyle = {
+    textAlign: "center",
+    backgroundColor: "green",
+    fontFamily: "Arial",
+    color: "white",
+    marginRight: "10px",
+    borderRadius: "5px",
+    };
+
+    const[catList, setCatList] = useState(cats);
+    
+    //REVERSE LIST
+    function handleReverseList() {
+        let newCatList = [...catList];
+        newCatList.reverse();
+        setCatList(newCatList);
+    }  
+    
+    //SORT CATS ALPHABETICALLY
+    function handleSortList() {
+        let newCatList = [...catList]; 
+        newCatList.sort((a, b) => a.name.localeCompare(b.name));
+        setCatList(newCatList); 
+    }
+
+    //SORT PANTHERA CATS
+    function handlePantheraCats() {
+        let newCatList = (catList.filter(cat => cat.latinName.startsWith("Panthera")))
+        setCatList(newCatList);
+    }
+
+    //RESET
+    function handleReset() {
+        setCatList(cats);
+    }
+
+    //ADD CAT
+    function handleAddCat({
+        name,
+        latinName,
+        imageURL,
+    })
+
+    {
+        let updatedCats = [...catList]
+        updatedCats.push({
+            id: updatedCats.length + 1,
+            name: name,
+            latinName: latinName,
+            imageURL: imageURL,
+        });
+        setCatList(updatedCats);
+    }
+
+    //UI
+    return (
+        <div>
+            <div style={{ textAlign: "center", marginBottom: "20px" }}>
+                <button style={buttonStyle} onClick={handleReverseList}>Reverse Cats</button>
+                <button style={buttonStyle} onClick={handleSortList}>Sort Cats</button>
+                <button style={buttonStyle} onClick={handlePantheraCats}>Panthera Cats</button>
+                <button style={buttonStyle} onClick={handleReset}>Reset</button>
+            </div>
+
+            <div className="List-of-Cats">
+                    {catList.map((cat) => (
+                        <SingleCat
+                            key ={cat.id} 
+                            name ={cat.name} 
+                            latinName ={cat.latinName} 
+                            imageURL ={cat.imageURL}
+                        ></SingleCat>
+                    ))}
+            </div>
+
+            <AddCatForm onAddCat={handleAddCat} style={{ marginTop: '20px' }}></AddCatForm>
+
+        </div>
+    );
+}
+
+export default BigCats;
