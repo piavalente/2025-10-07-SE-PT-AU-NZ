@@ -22,17 +22,17 @@ cars[2] = "Mitsubishi"; // replaces Toyota with Mitsubishi
 
 console.log(cars);
 
-let rivers = ['Mississippi', 'Amazon', 'Nile'];
+let rivers = ["Mississippi", "Amazon", "Nile"];
 let lastRiver = rivers.pop();
 console.log(lastRiver); // Nile
 console.log(rivers); // [ 'Mississippi', 'Amazon' ]
-rivers.shift()
-console.log(rivers)
+rivers.shift();
+console.log(rivers);
 
-let volcanoes = [ 'Mount Vesuvius', 'Mount Etna', 'Mount Fuji' ];
-let fujiIndex = volcanoes.indexOf('Mount Fuji');
+let volcanoes = ["Mount Vesuvius", "Mount Etna", "Mount Fuji"];
+let fujiIndex = volcanoes.indexOf("Mount Fuji");
 console.log(fujiIndex); // 2 (indexes start at 0)
-console.log(volcanoes.indexOf("Mount Etna")) //index of use to look for data
-console.log(volcanoes.indexOf("Mount Albert")) //1- as it is not indicated in the list of volcanoes
+console.log(volcanoes.indexOf("Mount Etna")); //index of use to look for data
+console.log(volcanoes.indexOf("Mount Albert")); //1- as it is not indicated in the list of volcanoes
 
-console.log(countries.length) //length gives size of array
+console.log(countries.length); //length gives size of array

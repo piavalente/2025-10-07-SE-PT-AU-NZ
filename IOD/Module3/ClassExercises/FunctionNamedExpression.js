@@ -1,5 +1,4 @@
 //Funcition names expressions
 
 HelloFunction();
-sayHello();  
-
+sayHello();

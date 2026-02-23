@@ -1,29 +1,32 @@
 //The following DigitalClock class uses an interval to print the time every second once started, until stopped.
 class DigitalClock {
+  constructor(prefix) {
+    this.prefix = prefix;
+  }
 
-    constructor(prefix) {
-        this.prefix = prefix;
-    }
-    
-    display() {
-        let date = new Date();
-        //create 3 variables in one go using array destructuring
-        let [hours, mins, secs] = [date.getHours(), date.getMinutes(), date.getSeconds()];
+  display() {
+    let date = new Date();
+    //create 3 variables in one go using array destructuring
+    let [hours, mins, secs] = [
+      date.getHours(),
+      date.getMinutes(),
+      date.getSeconds(),
+    ];
 
-            if (hours < 10) hours = '0' + hours;
-            if (mins < 10) mins = '0' + mins;
-            if (secs < 10) secs = '0' + secs;
-            console.log(`${this.prefix} ${hours}:${mins}:${secs}`);
-    }
+    if (hours < 10) hours = "0" + hours;
+    if (mins < 10) mins = "0" + mins;
+    if (secs < 10) secs = "0" + secs;
+    console.log(`${this.prefix} ${hours}:${mins}:${secs}`);
+  }
 
-    stop() {
-        clearInterval(this.timer);
-    }
+  stop() {
+    clearInterval(this.timer);
+  }
 
-    start() {
-        this.display();
-        this.timer = setInterval(() => this.display(), 1000);
-    }
+  start() {
+    this.display();
+    this.timer = setInterval(() => this.display(), 1000);
+  }
 }
 
 /* a) Create a new class PrecisionClock that inherits from DigitalClock and adds the
@@ -31,14 +34,14 @@ parameter precision – the number of ms between 'ticks'. This precision paramet
 should default to 1 second if not supplied. */
 
 class PrecisionClock extends DigitalClock {
-    constructor(prefix, precision = 1000) {
-        super(prefix)   //call the parent - DigitalClock
-        this.precision = precision;
-    }
-        start() {
-        this.display();
-        this.timer = setInterval(() => this.display(), this.precision);
-    }
+  constructor(prefix, precision = 1000) {
+    super(prefix); //call the parent - DigitalClock
+    this.precision = precision;
+  }
+  start() {
+    this.display();
+    this.timer = setInterval(() => this.display(), this.precision);
+  }
 }
 
 /* b) Create a new class AlarmClock that inherits from DigitalClock and adds the
@@ -47,41 +50,39 @@ should print a 'Wake Up' message and stop ticking. This wakeupTime parameter sho
 default to 07:00 if not supplied. */
 
 class AlarmClock extends DigitalClock {
-    constructor(prefix, wakeupTime = "07:00") {
-        super(prefix)
-        this.wakeupTime = wakeupTime;
+  constructor(prefix, wakeupTime = "07:00") {
+    super(prefix);
+    this.wakeupTime = wakeupTime;
+  }
+
+  display() {
+    //get current date and time
+    let date = new Date();
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+
+    if (hours < 10) hours = "0" + hours; //add 0 for numbers <10. Does not mean the time. Just a format
+    if (mins < 10) mins = "0" + mins;
+    let currentTime = `${hours}:${mins}`;
+
+    if (currentTime === this.wakeupTime) {
+      console.log("Wake Up!");
+      this.stop();
     }
-        
-    display() {
-        
-        //get current date and time
-        let date = new Date();
-        let hours = now.getHours();
-        let minutes = now.getMinutes();
+  }
 
-        if (hours < 10) hours = '0' + hours;    //add 0 for numbers <10. Does not mean the time. Just a format
-        if (mins < 10) mins = '0' + mins;
-        let currentTime = `${hours}:${mins}`;
+  start() {
+    this.display();
+    this.timer = setInterval(() => this.display(), 1000);
+  }
 
-        if (currentTime === this.wakeupTime) {
-                console.log('Wake Up!');
-                this.stop();
-            }
-        }
-
-    start() {
-        this.display();
-        this.timer = setInterval(() => this.display(), 1000);
-     }
-    
-    stop() {
-        clearInterval(this.timer);
+  stop() {
+    clearInterval(this.timer);
   }
 }
-
 
 /*const myClock = new DigitalClock('my clock:')
 myClock.start()*/
 
-const myClock = new PrecisionClock('my clock:')
-myClock.start()
+const myClock = new PrecisionClock("my clock:");
+myClock.start();

@@ -17,4 +17,4 @@ console.log(person1);
 console.log(1 / 0);
 console.log(-1 / 0);
 
-console.log(one+two+three)
+console.log(one + two + three);

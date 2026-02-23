@@ -9,35 +9,42 @@ full time console messages
 (d) Test your object by chaining all the method calls together in different combinations.*/
 
 const basketballGame = {
-    score: 0,
-    fouls: 0,
-    freeThrow() {
-        this.score++;
-        return this;        //return this allows object ot be chained
-    },
-    basket() {
-        this.score += 2;
-        return this;
-    },
-    threePointer() {
-        this.score += 3;
-        return this;
-    },
-    foul() {
-        this.fouls += 2; //increment fouls
-        return this;
-    },
-    halfTime() {
-        console.log(`Halftime score is ${this.score}, Fouls: ${this.fouls}`);
-        return this;
-    },
-    fullTime() {
-        console.log(`Fulltime score is ${this.score}, Fouls: ${this.fouls}`);
-        return this;
-    }
-
-}
+  score: 0,
+  fouls: 0,
+  freeThrow() {
+    this.score++;
+    return this; //return this allows object ot be chained
+  },
+  basket() {
+    this.score += 2;
+    return this;
+  },
+  threePointer() {
+    this.score += 3;
+    return this;
+  },
+  foul() {
+    this.fouls += 2; //increment fouls
+    return this;
+  },
+  halfTime() {
+    console.log(`Halftime score is ${this.score}, Fouls: ${this.fouls}`);
+    return this;
+  },
+  fullTime() {
+    console.log(`Fulltime score is ${this.score}, Fouls: ${this.fouls}`);
+    return this;
+  },
+};
 //modify each of the above object methods to enable function chaining as below:
-basketballGame.basket().freeThrow().freeThrow().basket().threePointer().foul().halfTime().fullTime();
-//2+1+1+2+3=9 
+basketballGame
+  .basket()
+  .freeThrow()
+  .freeThrow()
+  .basket()
+  .threePointer()
+  .foul()
+  .halfTime()
+  .fullTime();
+//2+1+1+2+3=9
 //call .foul before printing halTime and fullTime else it will show 0 not 2

@@ -9,7 +9,7 @@ console.log(regions[4]);
 //Replace the value of the element at position 1 and 4
 regions[1] = "Tasman";
 regions[4] = "Nelson";
-console.log(regions); 
+console.log(regions);
 
 //Add an element at the beginning of the array
 regions.unshift("Northland");
@@ -19,4 +19,3 @@ console.log(regions);
 let lastregions = regions.pop(); //remove Wellington
 console.log(lastregions);
 console.log(regions);
-

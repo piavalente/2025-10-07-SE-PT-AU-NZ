@@ -29,28 +29,28 @@ printFibonacci(8); //prints first 8 numbers
 calls to do the same thing */
 
 function printFibonacciTimeouts(x) {
-    let num = 0, num1 = 1, num2 = 2;
+  let num = 0,
+    num1 = 1,
+    num2 = 2;
 
-    function sequence() {
-        if (num >= x) return; 
-        /* c) Extend one of the above functions to accept a limit argument, which tells it how many
+  function sequence() {
+    if (num >= x) return;
+    /* c) Extend one of the above functions to accept a limit argument, which tells it how many
         numbers to print before stopping.*/
 
-        console.log(num1);
+    console.log(num1);
 
-        // calculate next number
-        const nextNum = num1 + num2;
-        num1 = num2;
-        num2 = nextNum;
+    // calculate next number
+    const nextNum = num1 + num2;
+    num1 = num2;
+    num2 = nextNum;
 
-        num++;
+    num++;
 
-        setTimeout(sequence, 1000); // call next after 1 second
-    }
+    setTimeout(sequence, 1000); // call next after 1 second
+  }
 
-    sequence(); // start the first call
+  sequence(); // start the first call
 }
 
-printFibonacciTimeouts(8);  
-
-
+printFibonacciTimeouts(8);

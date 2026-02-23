@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("./assets/BackgroundImage.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh
+}
+
+.Logo {
+  font-family: "Arial", sans-serif;
+  color: #2c3e50;
+  font-size: 2rem;
+  text-align: center;
+  margin: 20px 0;
+}

@@ -1,15 +1,19 @@
 import { useState } from "react";
+import ActivityFinder from "../../../../Module7/myreactapp/src/MyComponents/ActivityFinder";
 
 function LoginForm() {
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
   const [Result, setResult] = useState("");
+  const [showActivityFinder, setShowActivityFinder] = useState(true);
 
   function FormSubmitted() {
     if (Email.length < 5) {
       setResult("Email cannot be less than 5 characters");
+      setShowActivityFinder(true);
     } else if (Password.length < 4) {
       setResult("Password cannot be less than 4 characters");
+      setShowActivityFinder(true);
     } else {
       setResult("Form is submitted successfully");
       alert(`Email submitted: ${Email}`);
@@ -18,6 +22,8 @@ function LoginForm() {
       // clear inputs AFTER successful submit
       setEmail("");
       setPassword("");
+
+      setShowActivityFinder(true);
     }
   }
 
@@ -54,6 +60,9 @@ function LoginForm() {
       <div>
         <label>{Result}</label>
       </div>
+
+      {showActivityFinder && <ActivityFinder />}
+
     </div>
   );
 }

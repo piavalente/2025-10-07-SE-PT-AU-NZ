@@ -10,8 +10,7 @@ function AppRoutes() {
       <Routes>
         <Route path="/" element={<HomePage></HomePage>}></Route>
         <Route path="/Login" element={<Login></Login>}></Route>
-        <Route path="/BitcoinRates"element={<BitcoinRates></BitcoinRates>}>
-        </Route>
+        <Route path="/BitcoinRates"element={<BitcoinRates></BitcoinRates>}></Route>
         <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
       </Routes>
     </>

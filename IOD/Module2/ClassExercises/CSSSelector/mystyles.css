@@ -1,12 +1,12 @@
-h1, h2 {
-    background-color: yellow;
+h1,
+h2 {
+  background-color: yellow;
 }
 
 body {
-    background-color: white;
+  background-color: white;
 }
 
 .class1 {
-    color: red;
-
+  color: red;
 }

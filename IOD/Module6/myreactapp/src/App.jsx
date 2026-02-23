@@ -17,18 +17,12 @@ import Counter from './MyComponents/Counter.jsx';
 import MoodChanger from './MyComponents/MoodChanger.jsx';
 import BirthdayTranslator from './MyComponents/BirthdayTranslator.jsx';
 import Weather from './MyComponents/Weather.jsx';
-import LoginForm from './MyComponents/LoginFOrm.jsx';
-import SampleUncontrolledForm from './MyComponents/SampleUncontrolledForm.jsx';
+//import LoginForm from './MyComponents/LoginFOrm.jsx';
+//import SampleUncontrolledForm from './MyComponents/SampleUncontrolledForm.jsx';
 //import ExplodingBomb from './MyComponents/ExplodingBomb.jsx';
 
 
-//MODULE 7
-import Clock from './MyComponents/Clock.jsx';
-import ClockDisplay from './MyComponents/ClockDisplay.jsx';
-import ActivityFinder from './MyComponents/ActivityFinder.jsx';
-import VideoPlayer from './MyComponents/VideoPlayer.jsx';
-import ReduceCounter from './MyComponents/ReducerCounter.jsx';
-//import PostListReducer from './MyComponents/PostListReducer.jsx';
+
 
 
 
@@ -98,16 +92,8 @@ function App() {
     
   return (
     <>
-      {/*<ExplodingBomb></ExplodingBomb>*/}
-      <ReduceCounter></ReduceCounter>
-      <VideoPlayer></VideoPlayer>
-      <ActivityFinder></ActivityFinder>
-      <ClockDisplay></ClockDisplay>
-      <Clock></Clock>
-
-
-      <SampleUncontrolledForm></SampleUncontrolledForm>
-      <LoginForm></LoginForm>
+      {/*<SampleUncontrolledForm></SampleUncontrolledForm>
+      <LoginForm></LoginForm>*/}
       <Weather></Weather>
       <BirthdayTranslator></BirthdayTranslator>
       <MoodChanger></MoodChanger>

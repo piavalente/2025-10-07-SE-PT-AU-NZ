@@ -11,13 +11,13 @@ counter starts from (instead of always starting from 0) */
 much each call to counter() should increase the counter value by.*/
 
 function makeCounter(startFrom = 5, incrementBy = 2) {
-    let currentCount = startFrom;
+  let currentCount = startFrom;
 
-    return function() {
-        currentCount+= incrementBy;
-        console.log(currentCount)
-        return currentCount;
-    };    
+  return function () {
+    currentCount += incrementBy;
+    console.log(currentCount);
+    return currentCount;
+  };
 }
 
 let counter1 = makeCounter();
@@ -34,8 +34,4 @@ let counter3 = makeCounter(5);
 counter3();
 counter3();
 
-
-// I have overthinked this too much... 
-
-
-
+// I have overthinked this too much...

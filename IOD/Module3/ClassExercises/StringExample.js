@@ -9,7 +9,7 @@ console.log(string2);
 console.log(string3);
 
 console.log("The number of students in this cohort is " + numberOfStudents); //substituted value from let
-console.log(`The number of students in this cohort is ${numberOfStudents}`);  //does the same job
+console.log(`The number of students in this cohort is ${numberOfStudents}`); //does the same job
 
 let isChecked = true;
 let isToggledon = false;
@@ -21,30 +21,29 @@ console.log(isChecked);
 console.log(isChecked);
 console.log(isToggledon);
 
-if(isChecked) {
-    console.log("Is checked true") //this will not be executed bec last statement with ! became FALSE
+if (isChecked) {
+  console.log("Is checked true"); //this will not be executed bec last statement with ! became FALSE
 } else {
-    console.log("Is checked false"); //It will go stright here.
+  console.log("Is checked false"); //It will go stright here.
 }
 
-let x = 10
-if(x) {
-    console.log("x is true");
+let x = 10;
+if (x) {
+  console.log("x is true");
 } else {
-    console.log("x is false");
+  console.log("x is false");
 }
 
-//REMEMBER: 
+//REMEMBER:
 //0 is always false
 //string is false
 
+let age = null; //defined but no value
 
-let age=null;       //defined but no value
-
-if(age) {
-     //write logic to proceed
+if (age) {
+  //write logic to proceed
 } else {
-    console.log("please enter the age.");
+  console.log("please enter the age.");
 }
 
 let nameOfPerson;
@@ -53,11 +52,11 @@ console.log(nameOfPerson); //undefined- nothing exist
 let location; //undefined
 console.log(location);
 
-if(age=location) {
-    console.log("age and location are same values");
+if ((age = location)) {
+  console.log("age and location are same values");
 }
 
-if(age==location) { //== is to compare values
-    console.log("age and location are of same types");
+if (age == location) {
+  //== is to compare values
+  console.log("age and location are of same types");
 } else console.log("age and location are not of the same tiype");
-   
